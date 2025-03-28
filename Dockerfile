@@ -24,6 +24,11 @@ RUN mkdir -p /opt/harmonyos-tools && \
     chmod -R +x /opt/harmonyos-tools/command-line-tools/bin && \
     rm /tmp/commandline-tools-linux.zip
 
+# 下载 openharmony SDK 12
+RUN wget -O /tmp/ohos-sdk-public-5.0.0-release.tar.gz https://cidownload.openharmony.cn/version/Master_Version/OpenHarmony_5.0.0.71/20250315_060615/version-Master_Version-OpenHarmony_5.0.0.71-20250315_060615-ohos-sdk-public-5.0.0-release.tar.gz && \
+    tar -xvf /tmp/ohos-sdk-public-5.0.0-release.tar.gz -C /opt/harmonyos-tools/command-line-tools/sdk/12/ && \
+    rm /tmp/ohos-sdk-public-5.0.0-release.tar.gz
+
 # 设置 HarmonyOS CLI 工具的环境变量
 ENV COMMANDLINE_TOOL_DIR=/opt/harmonyos-tools
 ENV PATH=$COMMANDLINE_TOOL_DIR/command-line-tools/bin:$PATH
