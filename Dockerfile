@@ -51,11 +51,11 @@ RUN unzip -q /tmp/ohos_sdk/linux/toolchains-linux-x64-5.0.0.71-Release.zip -d /o
 
 
 RUN ls -l /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/ets && \
-    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/js && \
-    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/native && \
-    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains && \
-    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/previewer
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/ets/ && \
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/js/ && \
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/native/ && \
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains/ && \
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/previewer/
 
 RUN rm -rf /tmp/ohos_sdk /tmp/ohos-sdk-public-5.0.0-release.tar.gz
 
