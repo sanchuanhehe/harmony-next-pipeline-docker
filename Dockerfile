@@ -28,7 +28,8 @@ RUN mkdir -p /opt/harmonyos-tools && \
 RUN wget -q -O /tmp/ohos-sdk-public-5.0.0-release.tar.gz https://cidownload.openharmony.cn/version/Master_Version/OpenHarmony_5.0.0.71/20250315_060615/version-Master_Version-OpenHarmony_5.0.0.71-20250315_060615-ohos-sdk-public-5.0.0-release.tar.gz
 
 RUN mkdir -p /tmp/ohos_sdk && \
-    tar -xf /tmp/ohos-sdk-public-5.0.0-release.tar.gz -C /tmp/ohos_sdk
+    tar -xf /tmp/ohos-sdk-public-5.0.0-release.tar.gz -C /tmp/ohos_sdk/ && \
+    ls -l /tmp/ohos_sdk
 
 RUN mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12 && \
     mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12/ets && \
