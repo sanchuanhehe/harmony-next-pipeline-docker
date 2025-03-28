@@ -31,16 +31,20 @@ RUN mkdir -p /tmp/ohos_sdk && \
     tar -xf /tmp/ohos-sdk-public-5.0.0-release.tar.gz -C /tmp/ohos_sdk/ && \
     ls -l /tmp/ohos_sdk
 
+RUN rm /tmp/ohos-sdk-public-5.0.0-release.tar.gz
+
 RUN mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12 && \
     unzip -q /tmp/ohos_sdk/linux/ets-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/ets
 
 #使用/opt/harmonyos-tools/command-line-tools/sdk/12/ets/ets 替换 /opt/harmonyos-tools/command-line-tools/sdk/12/ets
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/ets /opt/harmonyos-tools/command-line-tools/sdk/12/ets.bak
+RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/ets
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/ets.bak/ets /opt/harmonyos-tools/command-line-tools/sdk/12/ets
 RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/ets.bak
 
 RUN unzip -q /tmp/ohos_sdk/linux/js-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/js
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/js /opt/harmonyos-tools/command-line-tools/sdk/12/js.bak
+RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/js
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/js.bak/js /opt/harmonyos-tools/command-line-tools/sdk/12/js
 RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/js.bak
 
@@ -49,17 +53,20 @@ RUN unzip -q /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/h
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/native/
 
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/native /opt/harmonyos-tools/command-line-tools/sdk/12/native.bak
+RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/native
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/native.bak/native /opt/harmonyos-tools/command-line-tools/sdk/12/native
 RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/native.bak
 
 RUN unzip -q /tmp/ohos_sdk/linux/previewer-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/previewer
 
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/previewer /opt/harmonyos-tools/command-line-tools/sdk/12/previewer.bak
+RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/previewer
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/previewer.bak/previewer /opt/harmonyos-tools/command-line-tools/sdk/12/previewer
 RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/previewer.bak
 
 RUN unzip -q /tmp/ohos_sdk/linux/toolchains-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains.bak
+RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains
 RUN cp -R /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains.bak/toolchains /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains
 RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains.bak
 
@@ -70,7 +77,7 @@ RUN ls -l /opt/harmonyos-tools/command-line-tools/sdk/12 && \
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains/ && \
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/previewer/
 
-RUN rm -rf /tmp/ohos_sdk /tmp/ohos-sdk-public-5.0.0-release.tar.gz
+RUN rm -rf /tmp/ohos_sdk 
 
 # RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/default
 
