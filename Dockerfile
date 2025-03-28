@@ -64,9 +64,9 @@ RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/default
 # 设置 HarmonyOS CLI 工具的环境变量
 ENV COMMANDLINE_TOOL_DIR=/opt/harmonyos-tools
 ENV PATH=$COMMANDLINE_TOOL_DIR/command-line-tools/bin:$PATH
-ENV HDC_HOME=$COMMANDLINE_TOOL_DIR/command-line-tools/sdk/default/openharmony/toolchains
+ENV HDC_HOME=$COMMANDLINE_TOOL_DIR/command-line-tools/sdk/12/openharmony/toolchains
 ENV PATH=$HDC_HOME:$PATH
-ENV OHOS_BASE_SDK_HOME=$COMMANDLINE_TOOL_DIR/command-line-tools/sdk/default/openharmony
+ENV OHOS_BASE_SDK_HOME=$COMMANDLINE_TOOL_DIR/command-line-tools/sdk/12/openharmony
 
 # 设置工作目录
 WORKDIR /workspace
