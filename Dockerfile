@@ -40,7 +40,8 @@ RUN mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12 && \
 
 RUN unzip -q /tmp/ohos_sdk/linux/js-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/js/
 
-RUN unzip -q /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/native/
+RUN unzip -q /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/native/ && \
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/native/
 
 RUN unzip -q /tmp/ohos_sdk/linux/previewr-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/previewr/
 
