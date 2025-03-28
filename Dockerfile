@@ -28,14 +28,20 @@ RUN mkdir -p /opt/harmonyos-tools && \
 RUN wget -q -O /tmp/ohos-sdk-public-5.0.0-release.tar.gz https://cidownload.openharmony.cn/version/Master_Version/OpenHarmony_5.0.0.71/20250315_060615/version-Master_Version-OpenHarmony_5.0.0.71-20250315_060615-ohos-sdk-public-5.0.0-release.tar.gz
 
 RUN mkdir -p /tmp/ohos_sdk && \
-    tar -xf /tmp/ohos-sdk-public-5.0.0-release.tar.gz -C /tmp/ohos_sdk && \
-    mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    unzip /tmp/ohos_sdk/linux/ets-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    unzip /tmp/ohos_sdk/linux/js-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    unzip /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    unzip /tmp/ohos_sdk/linux/previewr-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    unzip /tmp/ohos_sdk/linux/toolchains-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    rm -rf /tmp/ohos_sdk /tmp/ohos-sdk-public-5.0.0-release.tar.gz
+    tar -xf /tmp/ohos-sdk-public-5.0.0-release.tar.gz -C /tmp/ohos_sdk
+
+RUN mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12 && \
+    unzip /tmp/ohos_sdk/linux/ets-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12
+
+RUN unzip /tmp/ohos_sdk/linux/js-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12
+
+RUN unzip /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12
+
+RUN unzip /tmp/ohos_sdk/linux/previewr-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12
+
+RUN unzip /tmp/ohos_sdk/linux/toolchains-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12
+
+RUN rm -rf /tmp/ohos_sdk /tmp/ohos-sdk-public-5.0.0-release.tar.gz
 
 # 设置 HarmonyOS CLI 工具的环境变量
 ENV COMMANDLINE_TOOL_DIR=/opt/harmonyos-tools
