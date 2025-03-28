@@ -59,6 +59,8 @@ RUN ls -l /opt/harmonyos-tools/command-line-tools/sdk/12 && \
 
 RUN rm -rf /tmp/ohos_sdk /tmp/ohos-sdk-public-5.0.0-release.tar.gz
 
+RUN rm -rf /opt/harmonyos-tools/command-line-tools/sdk/default
+
 # 设置 HarmonyOS CLI 工具的环境变量
 ENV COMMANDLINE_TOOL_DIR=/opt/harmonyos-tools
 ENV PATH=$COMMANDLINE_TOOL_DIR/command-line-tools/bin:$PATH
