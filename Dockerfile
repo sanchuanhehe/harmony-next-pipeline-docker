@@ -32,21 +32,16 @@ RUN mkdir -p /tmp/ohos_sdk && \
     ls -l /tmp/ohos_sdk
 
 RUN mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12 && \
-    mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12/ets && \
-    mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12/js && \
-    mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12/native && \
-    mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12/previewer && \
-    mkdir -p /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains && \
-    unzip -q /tmp/ohos_sdk/linux/ets-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/ets/
+    unzip -q /tmp/ohos_sdk/linux/ets-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/ets
 
-RUN unzip -q /tmp/ohos_sdk/linux/js-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/js/
+RUN unzip -q /tmp/ohos_sdk/linux/js-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/js
 
-RUN unzip -q /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/native/ && \
+RUN unzip -q /tmp/ohos_sdk/linux/native-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/native && \
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/native/
 
-RUN unzip -q /tmp/ohos_sdk/linux/previewer-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/previewer/
+RUN unzip -q /tmp/ohos_sdk/linux/previewer-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/previewer
 
-RUN unzip -q /tmp/ohos_sdk/linux/toolchains-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains/
+RUN unzip -q /tmp/ohos_sdk/linux/toolchains-linux-x64-5.0.0.71-Release.zip -d /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains
 
 
 
