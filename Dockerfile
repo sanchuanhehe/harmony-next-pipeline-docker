@@ -55,7 +55,7 @@ RUN ls -l /opt/harmonyos-tools/command-line-tools/sdk/12 && \
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/js && \
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/native && \
     ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/toolchains && \
-    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/previewr
+    ls -l /opt/harmonyos-tools/command-line-tools/sdk/12/previewer
 
 RUN rm -rf /tmp/ohos_sdk /tmp/ohos-sdk-public-5.0.0-release.tar.gz
 
